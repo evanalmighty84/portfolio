@@ -1,0 +1,50 @@
+.navlink {
+  font-family: "sans-serif";
+}
+
+.navlink a:before, div.brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 35px;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+.navlink a:before
+{
+    content: '(';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+.navlink a:after
+{
+    content: ')';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+.navlink a:hover:before, .navlink a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.navlinkText {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navlinkText {
+    margin-top: 20px;
+  }
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.75)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #212121;
+}
